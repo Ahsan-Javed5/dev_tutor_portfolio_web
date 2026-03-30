@@ -31,6 +31,9 @@ class ProjectSection extends StatelessWidget {
         child: Row(
           children: projects
               .map((e) => Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.yellow),
+                  ),
                   margin: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 15,
@@ -107,15 +110,18 @@ class ProjectSection extends StatelessWidget {
                           const SizedBox(
                             height: 10.0,
                           ),
-                          Text(
-                            projectModel.description,
-                            style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 15.0,
+                          SizedBox(
+                            height: 110,
+                            child: Text(
+                              projectModel.description,
+                              style: const TextStyle(
+                                color: kCaptionColor,
+                                //height: 1.5,
+                                fontSize: 15.0,
+                              ),
+                              //maxLines: 2,
+                              //overflow: TextOverflow.ellipsis,
                             ),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
                           ),
                           const SizedBox(
                             height: 20.0,
