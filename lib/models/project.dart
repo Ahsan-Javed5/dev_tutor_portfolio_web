@@ -55,6 +55,40 @@ class ProjectModel {
     ),
   ];
 
+  static List<ProjectModel> teachings = [
+    ProjectModel(
+      project: "",
+      title: "50+ students",
+      description: "Math, CS & AI tutoring for school + early university level",
+      //appPhotos: AppConstants.at_project_image,
+      projectLink: "",
+      techUsed: [
+        //TechnologyConstants.flutter,
+      ],
+      //buttonText: "Play Store",
+    ),
+    ProjectModel(
+      project: "",
+      title: "Subjects",
+      description:
+          "Calculus I & II, Statistics & Probability, Mathematical Methods, Programming (Python / C++), Data Structures & Algorithms, AI / ML Basics, Computing Theory",
+      //appPhotos: AppConstants.at_project_image,
+      projectLink: "",
+      techUsed: [
+        //TechnologyConstants.flutter,
+      ],
+      //buttonText: "Play Store",
+    ),
+    ProjectModel(
+      project: "",
+      title: "Teaching Modes",
+      description:
+          "👤 1-to-1 Tutoring, 👥 Group Classes, 📚 Project-Based Learning, 🎯 SAT / Entry Test Prep",
+      projectLink: "",
+      techUsed: [],
+    ),
+  ];
+
   static List<ProjectModel> demos = [
     ProjectModel(
       project: "Flutter App",

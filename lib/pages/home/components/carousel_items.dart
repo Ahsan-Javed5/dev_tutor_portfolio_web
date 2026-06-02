@@ -171,7 +171,7 @@ List<CarouselItemModel> carouselItems(
               width: size,
               height: size,
               child: CircleAvatar(
-                backgroundColor: Colors.yellow,
+                backgroundColor: Colors.transparent,
                 child: CircleAvatar(
                   radius: size / 2 - 1,
                   backgroundImage: AssetImage(AppConstants.myImage),

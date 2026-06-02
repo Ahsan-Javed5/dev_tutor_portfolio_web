@@ -10,6 +10,7 @@ import 'package:my_portfolio/core/utils/constants.dart';
 import 'package:my_portfolio/core/utils/globals.dart';
 import 'package:my_portfolio/core/utils/screen_helper.dart';
 import 'package:my_portfolio/models/project.dart';
+import 'package:my_portfolio/models/teachings_model.dart';
 import 'package:my_portfolio/pages/home/components/about.dart';
 import 'package:my_portfolio/pages/home/components/carousel.dart';
 import 'package:my_portfolio/pages/home/components/footer.dart';
@@ -21,6 +22,8 @@ import 'package:my_portfolio/provider/amplitutde.dart';
 import 'package:my_portfolio/provider/home.dart';
 import 'package:my_portfolio/provider/theme.dart';
 import 'package:my_portfolio/widgets/switch.dart';
+
+import 'components/teachings.dart';
 
 class Home extends ConsumerStatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -76,7 +79,7 @@ class _HomeState extends ConsumerState<Home>
                 ),
                 SizedBox(
                   key: _homeProvider.portfolioKey,
-                  height: 100.0,
+                  height: 50.0,
                 ),
                 Center(
                     child: Column(
@@ -93,7 +96,7 @@ class _HomeState extends ConsumerState<Home>
                         "My Works",
                         style: GoogleFonts.josefinSans(
                           fontWeight: FontWeight.w900,
-                          fontSize: 36,
+                          fontSize: 32,
                         ),
                       ),
                     ),
@@ -139,6 +142,25 @@ class _HomeState extends ConsumerState<Home>
                 )),
                 ProjectSection(
                   projects: ProjectModel.projects.take(4).toList(),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Teaching & Academic Services",
+                        style: GoogleFonts.josefinSans(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 32,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                TeachingSection(
+                  teachings: TeachingModel.teachings.toList(),
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 28.0),
