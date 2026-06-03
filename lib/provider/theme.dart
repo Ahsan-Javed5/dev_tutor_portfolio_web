@@ -26,6 +26,19 @@ class MyThemes {
     scaffoldBackgroundColor: Colors.white,
     colorScheme: const ColorScheme.light(),
     primaryColor: const Color(0xFFFFD800),
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(
+        color: kPrimaryColor,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: kPrimaryColor,
+        ),
+      ),
+    ),
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: kPrimaryColor,
+    ),
     iconTheme: const IconThemeData(color: kPrimaryColor),
     primarySwatch: Colors.yellow,
     textButtonTheme: TextButtonThemeData(
@@ -37,6 +50,19 @@ class MyThemes {
       colorScheme: const ColorScheme.dark(),
       primarySwatch: Colors.yellow,
       primaryColor: const Color(0xFFFFD800),
+      inputDecorationTheme: const InputDecorationTheme(
+        floatingLabelStyle: TextStyle(
+          color: kPrimaryColor,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: kPrimaryColor,
+          ),
+        ),
+      ),
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: kPrimaryColor,
+      ),
       iconTheme: IconThemeData(color: Colors.grey[400]),
       textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(

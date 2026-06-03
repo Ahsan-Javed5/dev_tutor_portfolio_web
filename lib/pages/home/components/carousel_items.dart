@@ -10,6 +10,8 @@ import 'package:my_portfolio/core/utils/strings.dart';
 import 'package:my_portfolio/models/carousel_item_model.dart';
 import 'package:my_portfolio/provider/theme.dart';
 
+import '../../../widgets/booking_dialog.dart';
+
 List<CarouselItemModel> carouselItems(
         double carouselContainerHeight, BuildContext context) =>
     List.generate(
@@ -102,8 +104,11 @@ List<CarouselItemModel> carouselItems(
                       ),
                       child: TextButton(
                         onPressed: () {
-                          context.pushNamed(Routes.videoDownloader);
-                          //   Utilty.openUrl(AppConstants.linkedInUrl);
+                          showDialog(
+                            context: context,
+                            barrierDismissible: false,
+                            builder: (_) => const BookingDialog(),
+                          );
                         },
                         child: Text(
                           "Let's Talk",
