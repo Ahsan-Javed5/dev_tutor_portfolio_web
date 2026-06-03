@@ -28,22 +28,29 @@ class MyThemes {
     primaryColor: const Color(0xFFFFD800),
     inputDecorationTheme: const InputDecorationTheme(
       floatingLabelStyle: TextStyle(
-        color: kPrimaryColor,
+        color: Colors.black,
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: kPrimaryColor,
+          color: Colors.black,
         ),
       ),
     ),
     textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: kPrimaryColor,
+      cursorColor: Colors.black,
     ),
     iconTheme: const IconThemeData(color: kPrimaryColor),
     primarySwatch: Colors.yellow,
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all(kBackgroundColor))),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all(
+          Colors.black,
+        ),
+      ),
+    ),
   );
   static final darkTheme = ThemeData(
       scaffoldBackgroundColor: const Color.fromRGBO(7, 17, 26, 1),

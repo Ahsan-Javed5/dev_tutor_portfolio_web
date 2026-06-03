@@ -111,7 +111,7 @@ List<CarouselItemModel> carouselItems(
                           );
                         },
                         child: Text(
-                          "Let's Talk",
+                          "Book a Session",
                           style: TextStyle(
                             color: Colors.grey[800],
                             fontSize: 13.0,

@@ -163,8 +163,8 @@ class BookingDialog extends ConsumerWidget {
                         ? "Choose Slot"
                         : "Change Slot",
                     style: TextStyle(
-                      color: Colors.white,
-                    ),
+                        //color: Colors.white,
+                        ),
                   ),
                 ),
                 if (booking.selectedSlot != null) ...[
