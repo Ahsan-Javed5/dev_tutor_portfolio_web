@@ -21,19 +21,11 @@ class TechnologyConstants {
       TechnologyModel("Razor Pay", AppConstants.razorPayImage);
   static TechnologyModel cPlus =
       TechnologyModel("C++", AppConstants.cPlusImage);
-  static TechnologyModel javascript =
-      TechnologyModel("Javascript", AppConstants.javascriptImage);
-  static TechnologyModel swift =
-      TechnologyModel("Swift", AppConstants.swiftImage);
-  static TechnologyModel sceneKit =
-      TechnologyModel("SceneKit", AppConstants.sceneKitImage);
 
   static List<TechnologyModel> technologyLearned = [
     flutter,
-    //swift,
     cPlus,
     python,
-    //javascript,
     flask
   ];
 }

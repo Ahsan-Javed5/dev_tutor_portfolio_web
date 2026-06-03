@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:life_from_simple_rules/screens/home.dart';
 import 'package:my_portfolio/core/utils/constants.dart';
-import 'package:my_portfolio/pages/demo/demo.dart';
 import 'package:my_portfolio/pages/home/home.dart';
 import 'package:my_portfolio/pages/home/smart_bill_book/smart_bill_book.dart';
-import 'package:my_portfolio/pages/json_to_dart/json_to_dart.dart';
-import 'package:my_portfolio/pages/video_downloader/video_downloader.dart';
 import 'package:my_portfolio/pages/works/works.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:sand_simulation/home.dart';
 
 class Routes {
   static const String initial = "/";
@@ -32,40 +27,10 @@ class RouterGenerator {
         ),
         routes: [
           GoRoute(
-            path: Routes.demos,
-            name: Routes.demos,
-            builder: (context, state) =>
-                const _AppResponsiveBuilder(child: DemoScreen()),
-          ),
-          GoRoute(
             path: Routes.myWorks,
             name: Routes.myWorks,
             builder: (context, state) =>
                 const _AppResponsiveBuilder(child: MyWorksScreen()),
-          ),
-          GoRoute(
-            path: Routes.simulation,
-            name: Routes.simulation,
-            builder: (context, state) =>
-                const _AppResponsiveBuilder(child: ParticleScreen()),
-          ),
-          GoRoute(
-            path: Routes.sandSimulation,
-            name: Routes.sandSimulation,
-            builder: (context, state) =>
-                const _AppResponsiveBuilder(child: SandSimulationScreen()),
-          ),
-          GoRoute(
-            path: Routes.jsonToDart,
-            name: Routes.jsonToDart,
-            builder: (context, state) =>
-                const _AppResponsiveBuilder(child: JsonToDartScreen()),
-          ),
-          GoRoute(
-            path: Routes.videoDownloader,
-            name: Routes.videoDownloader,
-            builder: (context, state) =>
-                const _AppResponsiveBuilder(child: VideoDownloaderScreen()),
           ),
           GoRoute(
             path: Routes.smartBillBookPrivacy,

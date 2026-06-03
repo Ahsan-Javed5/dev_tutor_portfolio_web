@@ -18,7 +18,6 @@ import 'package:my_portfolio/pages/home/components/header.dart';
 import 'package:my_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:my_portfolio/pages/home/components/project.dart';
 import 'package:my_portfolio/pages/home/components/service.dart';
-import 'package:my_portfolio/provider/amplitutde.dart';
 import 'package:my_portfolio/provider/home.dart';
 import 'package:my_portfolio/provider/theme.dart';
 import 'package:my_portfolio/widgets/switch.dart';
@@ -35,20 +34,11 @@ class Home extends ConsumerStatefulWidget {
 class _HomeState extends ConsumerState<Home>
     with SingleTickerProviderStateMixin {
   late HomeProvider _homeProvider;
-  late AmplitutdeProvider _amplitutdeProvider;
   final ScrollController scrollController = ScrollController();
 
   @override
   void initState() {
     _homeProvider = ref.read(homeProvider);
-    _amplitutdeProvider = ref.read(amplitudeProvider);
-
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
-      Timer(const Duration(seconds: 2), () async {
-        _amplitutdeProvider.logStartupEvent();
-        await _amplitutdeProvider.logAScreen("home");
-      });
-    });
     super.initState();
   }
 
@@ -143,6 +133,7 @@ class _HomeState extends ConsumerState<Home>
                 ProjectSection(
                   projects: ProjectModel.projects.take(4).toList(),
                 ),
+                //DemoScreen(),
                 SizedBox(
                   height: 15,
                 ),
