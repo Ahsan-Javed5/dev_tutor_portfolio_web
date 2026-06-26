@@ -1,8 +1,3 @@
-import 'package:my_portfolio/core/routes/routes.dart';
-import 'package:my_portfolio/core/utils/constants.dart';
-import 'package:my_portfolio/models/link.dart';
-import 'package:my_portfolio/models/technology.dart';
-
 class TeachingModel {
   final String title;
   final List<String> descriptionList;

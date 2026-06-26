@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/utils/constants.dart';
 import 'package:my_portfolio/pages/home/home.dart';
-import 'package:my_portfolio/pages/home/smart_bill_book/smart_bill_book.dart';
 import 'package:my_portfolio/pages/works/works.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -31,12 +30,6 @@ class RouterGenerator {
             name: Routes.myWorks,
             builder: (context, state) =>
                 const _AppResponsiveBuilder(child: MyWorksScreen()),
-          ),
-          GoRoute(
-            path: Routes.smartBillBookPrivacy,
-            name: Routes.smartBillBookPrivacy,
-            builder: (context, state) => const _AppResponsiveBuilder(
-                child: SmartBillBookPrivacyPolicyScreen()),
           ),
         ],
       ),
