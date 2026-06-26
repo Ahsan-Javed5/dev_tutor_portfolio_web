@@ -22,8 +22,6 @@ class MyApp extends StatelessWidget {
             theme: MyThemes.lightTheme,
             darkTheme: MyThemes.darkTheme,
             routerConfig: RouterGenerator.router,
-            // initialRoute: Routes.initial,
-            // onGenerateRoute: RouterGenerator.generateRoute,
           ),
         );
       },
