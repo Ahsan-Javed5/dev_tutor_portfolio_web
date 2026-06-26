@@ -27,8 +27,8 @@ class AppConstants {
 
   static const _images = "${_assets}images/";
 
-  static const myImage = "${_images}image2.png";
-  static const myTutorImage = "${_images}image3.png";
+  static const myImage = "${_images}image2.webp";
+  static const myTutorImage = "${_images}image3.webp";
   static const at_project_image = "${_images}at_proj_img.png";
   static const feyst_project_image = "${_images}feyst_proj_img.png";
   static const _techImages = "${_images}technology/";

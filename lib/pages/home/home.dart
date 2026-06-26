@@ -10,7 +10,7 @@ import 'package:my_portfolio/core/utils/screen_helper.dart';
 import 'package:my_portfolio/models/project.dart';
 import 'package:my_portfolio/models/teachings_model.dart';
 import 'package:my_portfolio/pages/home/components/about.dart';
-import 'package:my_portfolio/pages/home/components/carousel.dart';
+import 'package:my_portfolio/pages/home/components/hero_section.dart';
 import 'package:my_portfolio/pages/home/components/footer.dart';
 import 'package:my_portfolio/pages/home/components/header.dart';
 import 'package:my_portfolio/pages/home/components/portfolio_stats.dart';
@@ -53,7 +53,7 @@ class _HomeState extends ConsumerState<Home>
                 SizedBox(
                   height: ScreenHelper.isDesktop(context) ? 30 : 20,
                 ),
-                Carousel(
+                HeroSection(
                   key: _homeProvider.homeKey,
                 ),
                 const SizedBox(
