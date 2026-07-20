@@ -5,7 +5,7 @@ import 'package:my_portfolio/models/name_color.dart';
 import 'package:my_portfolio/provider/theme.dart';
 import 'package:my_portfolio/core/utils/utils.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-
+import 'dart:html' as html;
 import '../../../models/design_process.dart';
 import '../../../core/utils/constants.dart';
 import '../../../core/utils/screen_helper.dart';
@@ -92,7 +92,9 @@ class ServiceSection extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Utilty.openUrl("https://your-cv-link.com");
+                  html.AnchorElement(href: "assets/my_cv.pdf")
+                    ..setAttribute("download", "Ahsan_Javed_CV.pdf")
+                    ..click();
                 },
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
