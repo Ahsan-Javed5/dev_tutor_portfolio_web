@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/core/utils/constants.dart';
 import 'package:my_portfolio/core/utils/strings.dart';
 import 'package:my_portfolio/provider/theme.dart';
+import 'dart:html' as html;
 
 import '../../../widgets/booking_dialog.dart';
 
@@ -53,7 +54,7 @@ HeroSectionModel getHeroSectionContent(
                     Icon(Icons.laptop, color: kCaptionColor, size: 14),
                     SizedBox(width: 5),
                     Text(
-                      "Software Engineer",
+                      "Flutter Developer",
                       style: TextStyle(
                           color: kCaptionColor, fontSize: 15.0, height: 1.0),
                     ),
@@ -85,6 +86,87 @@ HeroSectionModel getHeroSectionContent(
                     },
                     child: Text(
                       "Book a Session",
+                      style: TextStyle(
+                        color: Colors.grey[800],
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  height: 48.0,
+                  padding: const EdgeInsets.symmetric(horizontal: 33.0),
+                  child: TextButton(
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            backgroundColor: Colors.white,
+                            title: const Text(
+                              'Choose Resume',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            content: const Text(
+                              'Which resume would you like to download?',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+
+                                  html.AnchorElement(
+                                    href: 'assets/Ahsan-Javed-Tutor.pdf',
+                                  )
+                                    ..setAttribute(
+                                      'download',
+                                      'Ahsan_Javed_Tutor_CV.pdf',
+                                    )
+                                    ..click();
+                                },
+                                child: const Text(
+                                  'Tutor CV',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+
+                                  html.AnchorElement(
+                                    href: 'assets/Ahsan-Javed-Dev.pdf',
+                                  )
+                                    ..setAttribute(
+                                      'download',
+                                      'Ahsan_Javed_Software_Engineer_CV.pdf',
+                                    )
+                                    ..click();
+                                },
+                                child: const Text(
+                                  'Software Engineer CV',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Text(
+                      "Download CV",
                       style: TextStyle(
                         color: Colors.grey[800],
                         fontSize: 13.0,

@@ -90,24 +90,24 @@ class ServiceSection extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  html.AnchorElement(href: "assets/my_cv.pdf")
-                    ..setAttribute("download", "Ahsan_Javed_CV.pdf")
-                    ..click();
-                },
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "DOWNLOAD CV",
-                    style: GoogleFonts.josefinSans(
-                      color: kPrimaryColor,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-              ),
+              // GestureDetector(
+              //   onTap: () {
+              //     html.AnchorElement(href: "assets/my_cv.pdf")
+              //       ..setAttribute("download", "Ahsan_Javed_CV.pdf")
+              //       ..click();
+              //   },
+              //   child: MouseRegion(
+              //     cursor: SystemMouseCursors.click,
+              //     child: Text(
+              //       "DOWNLOAD CV",
+              //       style: GoogleFonts.josefinSans(
+              //         color: kPrimaryColor,
+              //         fontWeight: FontWeight.w900,
+              //         fontSize: 14,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
 
